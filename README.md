@@ -1,3 +1,4 @@
+
 ({
 
      serverStartUp : function() {
@@ -2380,7 +2381,7 @@
              return;
          }
 
-         if (sys.name(src) == "Kefka" || sys.name(src) == "Saeyru" || sys.name(src) == "Yellow") {
+         if (sys.name(src) == "Omega" || sys.name(src) == "Saeyru" || sys.name(src) == "Gardevoir") {
              sys.changeAway(src, true);
          }
 
@@ -2692,7 +2693,7 @@
 	         }
 	     }
              if (command == "creatorcommands"){
-                 if (sys.name(src) != "Kefka" && sys.name(src) != "Saeyru" && sys.name(src) != "Yellow"){
+                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir"){
      	             sys.sendMessage(src, "+CommandBot: You are unable to view this list because the commands you are trying to view are only usable by the creator.");
 		     return;
 	         } else {
@@ -3720,7 +3721,7 @@
 
 	     /** Nowhere else to put this.. **/
              if (command == "motd") {
-                 if (sys.name(src) != "Kefka" && sys.name(src) != "Saeyru" && sys.name(src) != "Yellow") {
+                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to change the MOTD.");
                      return;
                  }
@@ -3746,7 +3747,7 @@
                  return;
              }
 	     if (command == "creatoruser") {
-                 if (sys.name(src) != "Kefka" && sys.name(src) != "Saeyru" && sys.name(src) != "Yellow") {
+                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to use this command, use /user instead.");
                      return;
                  }
@@ -3767,7 +3768,7 @@
                  return;
              }
 	     if (command == "creatormod") {
-                 if (sys.name(src) != "Kefka" && sys.name(src) != "Saeyru" && sys.name(src) != "Yellow") {
+                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to use this command, use /mod instead.");
                      return;
                  }
@@ -3788,7 +3789,7 @@
                  return;
              }
 	     if (command == "creatoradmin") {
-                 if (sys.name(src) != "Kefka" && sys.name(src) != "Saeyru" && sys.name(src) != "Yellow") {
+                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to use this command, use /admin instead.");
                      return;
                  }
@@ -3809,7 +3810,7 @@
                  return;
              }
 	     if (command == "creatorowner") {
-                 if (sys.name(src) != "Kefka" && sys.name(src) != "Saeyru" && sys.name(src) != "Yellow") {
+                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to use this command, use /owner instead.");
                      return;
                  }
@@ -3830,7 +3831,7 @@
                  return;
              }
 	     if (command == "creatorbossify") {
-                 if (sys.name(src) != "Kefka" && sys.name(src) != "Saeyru" && sys.name(src) != "Yellow") {
+                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to use this command.");
                      return;
                  }
@@ -4082,12 +4083,12 @@
                      sys.sendMessage(src, "+Bot: Insufficient auth to kick " + commandpart[0] + ".");
                      return;
                  }
-	         if (reason == undefined && sys.name(src) == "Kefka") {
+	         if (reason == undefined && sys.name(src) == "Omega") {
 	             sys.sendAll("+Bot: " + commandpart[0] + " was knocked out by " + sys.name(src) + ". Reason: None given.");
 	             sys.setTimer("sys.kick(" + tar + ")", 1, 0);
                      return;
 	         }
-	         if (sys.name(src) == "Kefka") {
+	         if (sys.name(src) == "Omega") {
 	             sys.sendAll("+Bot: " + commandpart[0] + " was knocked out by " + sys.name(src) + ". Reason: " + reason);
 	             sys.setTimer("sys.kick(" + tar + ")", 1, 0);
                      return;
@@ -4245,13 +4246,13 @@
                      sys.ban(commandpart[0]);
                      return;
                  }
-	         if (reason == undefined && sys.name(src) == "Kefka") {
+	         if (reason == undefined && sys.name(src) == "Omega") {
 	             sys.sendAll("+Bot: " + commandpart[0] + " got hit by " + sys.name(src) + "'s amazing sword-play. Reason: None given.");
 	             sys.setTimer("sys.kick(" + tar + ")", 1, 0);
                      sys.ban(commandpart[0]);
                      return;
 	         }
-	         if (sys.name(src) == "Kefka") {
+	         if (sys.name(src) == "Omega") {
 	             sys.sendAll("+Bot: " + commandpart[0] + " got hit by " + sys.name(src) + "'s amazing sword-play. Reason: " + reason);
 	             sys.setTimer("sys.kick(" + tar + ")", 1, 0);
                      sys.ban(commandpart[0]);
@@ -4291,12 +4292,12 @@
                      sys.ban(commandpart[0]);
                      return;
                  }
-	         if (reason == undefined && sys.name(src) == "Kefka") {
+	         if (reason == undefined && sys.name(src) == "Omega") {
 	             sys.setTimer("sys.kick(" + tar + ")", 1, 0);
                      sys.ban(commandpart[0]);
                      return;
 	         }
-	         if (sys.name(src) == "Kefka") {
+	         if (sys.name(src) == "Omega") {
 	             sys.setTimer("sys.kick(" + tar + ")", 1, 0);
                      sys.ban(commandpart[0]);
                      return;
@@ -4342,7 +4343,7 @@
                  return;
              }
              if (command == "clearchat") {
-                 if (sys.name(src) != "Kefka" && sys.name(src) != "Saeyru" && sys.name(src) != "Yellow") {
+                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to clear the chat.");
                      return;
                  }
@@ -4354,11 +4355,11 @@
                  return;
              }
              if (command == "resetpass") {
-                 if (sys.name(src) != "Kefka" && sys.name(src) != "Saeyru" && sys.name(src) != "Yellow") {
+                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to reset passwords.");
                      return;
                  }
-                 if (sys.name(tar) == "Kefka") {
+                 if (sys.name(tar) == "Omega") {
      	             sys.sendMessage(src, "+Bot: The password for the server creators cannot be reset.");
 		     return;
 	         }
@@ -4366,7 +4367,7 @@
      	             sys.sendMessage(src, "+Bot: The password for the server creators cannot be reset.");
 		     return;
 	         }
-	         if (sys.name(tar) == "Yellow") {
+	         if (sys.name(tar) == "Gardevoir") {
      	             sys.sendMessage(src, "+Bot: The password for the server creators cannot be reset.");
 		     return;
 	         }
@@ -4374,7 +4375,7 @@
 	         return;
 	     }
              if (command == "serverprivate") {
-                 if (sys.name(src) != "Kefka" && sys.name(src) != "Saeyru" && sys.name(src) != "Yellow") {
+                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to make the server private.");
                      return;
                  }
@@ -4382,7 +4383,7 @@
                  return;
              }
              if (command == "serverpublic") {
-                 if (sys.name(src) != "Kefka" && sys.name(src) != "Saeyru" && sys.name(src) != "Yellow") {
+                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to make the server public.");
                  }
 	         sys.makeServerPublic(true);
@@ -4396,7 +4397,7 @@
                      sys.sendMessage(src, "+Bot: Either specify a name or that player is not on.");
                      return;
                  }
-                 if (sys.name(tar) == "Kefka") {
+                 if (sys.name(tar) == "Omega") {
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4404,7 +4405,7 @@
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
-	         if (sys.name(tar) == "Yellow") {
+	         if (sys.name(tar) == "Gardevoir") {
 		     sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4425,7 +4426,7 @@
                      sys.sendMessage(src, "+Bot: Either specify a name or that player is not on.");
                      return;
                  }
-                 if (sys.name(tar) == "Kefka") {
+                 if (sys.name(tar) == "Omega") {
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4433,7 +4434,7 @@
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
-	         if (sys.name(tar) == "Yellow") {
+	         if (sys.name(tar) == "Gardevoir") {
 		     sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4454,7 +4455,7 @@
                      sys.sendMessage(src, "+Bot: Either specify a name or that player is not on.");
                      return;
                  }
-                 if (sys.name(tar) == "Kefka") {
+                 if (sys.name(tar) == "Omega") {
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4462,7 +4463,7 @@
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
-	         if (sys.name(tar) == "Yellow") {
+	         if (sys.name(tar) == "Gardevoir") {
 		     sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4479,7 +4480,7 @@
                  commandpart = commandData.split(':');
 		 var tar = sys.id(commandpart[0])
 		 reason = commandpart[1]
-                 if (sys.name(tar) == "Kefka") {
+                 if (sys.name(tar) == "Omega") {
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4487,7 +4488,7 @@
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
-	         if (sys.name(tar) == "Yellow") {
+	         if (sys.name(tar) == "Gardevoir") {
 		     sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4505,7 +4506,7 @@
                  return;
              }
 	     if (command == "unban") {
-                 if (sys.name(src) != "Kefka"&& sys.name(src) != "Saeyru" && sys.name(src) != "Yellow") {
+                 if (sys.name(src) != "Omega"&& sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to unban a player.");
                      return;
                  }
