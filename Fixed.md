@@ -2381,7 +2381,7 @@
              return;
          }
 
-         if (sys.name(src) == "Omega" || sys.name(src) == "Saeyru" || sys.name(src) == "Gardevoir") {
+         if (sys.name(src) == "Axel" || sys.name(src) == "Saeyru" || sys.name(src) == "Misora") {
              sys.changeAway(src, true);
          }
 
@@ -2623,10 +2623,6 @@
                  sys.sendHtmlMessage(src, '<font color="green"><timestamp/> <b>/faq</b></font> - to display frequently asked questions and answers to them.');
                  sys.sendHtmlMessage(src, '<font color="green"><timestamp/> <b>/ranking</b></font> - to get your ranking in your tier.');
                  sys.sendHtmlMessage(src, '<font color="green"><timestamp/> <b>/commands</b></font><b> or </b><font color="green"><b>/command</b></font> - to bring up the command categories.');
-                 sys.sendHtmlMessage(src, '<font color="green"><timestamp/> <b>/sendall [message]</b></font> - to send a message to everyone.');
-                 sys.sendHtmlMessage(src, '<font color="green"><timestamp/> <b>/sendhtmlall [message]</b></font> - to send some HTML code to everyone.');
-                 sys.sendHtmlMessage(src, '<font color="green"><timestamp/> <b>/sendmsg [message]</b></font> - to send a message to yourself.');
-                 sys.sendHtmlMessage(src, '<font color="green"><timestamp/> <b>/sendhtmlmsg [message]</b></font> - to send some HTML code to yourself.');
                  sys.sendHtmlMessage(src, '<font color="green"><timestamp/> <b>/vote [choice]</b></font> - to vote in a poll.');
                  sys.sendHtmlMessage(src, '<font color="green"><timestamp/> <b>/viewpoll</b></font> - to view the current poll, as well as the choices.');
                  sys.sendHtmlMessage(src, '<font color="green"><timestamp/> <b>/join</b></font> - to join a tournament.');
@@ -2693,7 +2689,7 @@
 	         }
 	     }
              if (command == "creatorcommands"){
-                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir"){
+                 if (sys.name(src) != "Roxas" && sys.name(src) != "Saeyru" && sys.name(src) != "Misora"){
      	             sys.sendMessage(src, "+CommandBot: You are unable to view this list because the commands you are trying to view are only usable by the creator.");
 		     return;
 	         } else {
@@ -3460,22 +3456,7 @@
                      return;
                  }
              }
-             if (command == "sendall") {
-	         var namesrc = sys.name(src);
-                 if (channel == mafiachan && mafia.ticks > 0 && mafia.state!="blank" && !mafia.isInGame(sys.name(src)) && sys.auth(src) <= 0) {
-                     sys.stopEvent();
-                     sys.sendMessage(src, "±Game: You're not playing, so shush! Go in another channel to talk!", mafiachan);
-                     return;
-                 }
-	         if (muteall && sys.auth(src) == 0) {
-                     sys.sendMessage(src, "+Bot: You cannot use this command while massmute is in effect. Please wait until it is over.");
-	             return;
-	         } else {
-                     sys.sendAll(commandData, channel);
-                     return;
-                 }
-             }
-             if (command == "sendmsg") {
+                          if (command == "sendmsg") {
                  sys.sendMessage(src, commandData, channel);
                  return;
              }
@@ -3721,7 +3702,7 @@
 
 	     /** Nowhere else to put this.. **/
              if (command == "motd") {
-                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
+                 if (sys.name(src) != "Roxas" && sys.name(src) != "Saeyru" && sys.name(src) != "Misora") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to change the MOTD.");
                      return;
                  }
@@ -3747,7 +3728,7 @@
                  return;
              }
 	     if (command == "creatoruser") {
-                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
+                 if (sys.name(src) != "Axel" && sys.name(src) != "Saeyru" && sys.name(src) != "Misora") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to use this command, use /user instead.");
                      return;
                  }
@@ -3768,7 +3749,7 @@
                  return;
              }
 	     if (command == "creatormod") {
-                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
+                 if (sys.name(src) != "Axel" && sys.name(src) != "Saeyru" && sys.name(src) != "Misora") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to use this command, use /mod instead.");
                      return;
                  }
@@ -3789,7 +3770,7 @@
                  return;
              }
 	     if (command == "creatoradmin") {
-                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
+                 if (sys.name(src) != "Axel" && sys.name(src) != "Saeyru" && sys.name(src) != "Misora") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to use this command, use /admin instead.");
                      return;
                  }
@@ -3810,7 +3791,7 @@
                  return;
              }
 	     if (command == "creatorowner") {
-                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
+                 if (sys.name(src) != "Axel" && sys.name(src) != "Saeyru" && sys.name(src) != "Misora") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to use this command, use /owner instead.");
                      return;
                  }
@@ -3831,7 +3812,7 @@
                  return;
              }
 	     if (command == "creatorbossify") {
-                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
+                 if (sys.name(src) != "Axel" && sys.name(src) != "Saeyru" && sys.name(src) != "Misora") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to use this command.");
                      return;
                  }
@@ -4209,7 +4190,23 @@
 		 for ( var z in server.polloptions ) {
 		     sys.sendAll('+Bot: Option #'+(z*1+1)+': '+ server.polloptions[z]); }
 		 server.pollmode = 1;
-		 return; }
+		 return; 
+		if (command == "sendall") {
+	         var namesrc = sys.name(src);
+                 if (channel == mafiachan && mafia.ticks > 0 && mafia.state!="blank" && !mafia.isInGame(sys.name(src)) && sys.auth(src) <= 0) {
+                     sys.stopEvent();
+                     sys.sendMessage(src, "±Game: You're not playing, so shush! Go in another channel to talk!", mafiachan);
+                     return;
+                 }
+	         if (muteall && sys.auth(src) == 0) {
+                     sys.sendMessage(src, "+Bot: You cannot use this command while massmute is in effect. Please wait until it is over.");
+	             return;
+	         } else {
+                     sys.sendAll(commandData, channel);
+                     return;
+                 }
+             }
+}
              /** Now for the administrator commands **/
              if (sys.auth(src) < 2) {
                  return;
@@ -4343,7 +4340,7 @@
                  return;
              }
              if (command == "clearchat") {
-                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
+                 if (sys.name(src) != "Axel" && sys.name(src) != "Saeyru" && sys.name(src) != "Misora") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to clear the chat.");
                      return;
                  }
@@ -4355,11 +4352,11 @@
                  return;
              }
              if (command == "resetpass") {
-                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
+                 if (sys.name(src) != "Axel" && sys.name(src) != "Saeyru" && sys.name(src) != "Misora") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to reset passwords.");
                      return;
                  }
-                 if (sys.name(tar) == "Omega") {
+                 if (sys.name(tar) == "Axel") {
      	             sys.sendMessage(src, "+Bot: The password for the server creators cannot be reset.");
 		     return;
 	         }
@@ -4367,7 +4364,7 @@
      	             sys.sendMessage(src, "+Bot: The password for the server creators cannot be reset.");
 		     return;
 	         }
-	         if (sys.name(tar) == "Gardevoir") {
+	         if (sys.name(tar) == "Misora") {
      	             sys.sendMessage(src, "+Bot: The password for the server creators cannot be reset.");
 		     return;
 	         }
@@ -4375,7 +4372,7 @@
 	         return;
 	     }
              if (command == "serverprivate") {
-                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
+                 if (sys.name(src) != "Axel" && sys.name(src) != "Saeyru" && sys.name(src) != "Misora") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to make the server private.");
                      return;
                  }
@@ -4383,7 +4380,7 @@
                  return;
              }
              if (command == "serverpublic") {
-                 if (sys.name(src) != "Omega" && sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
+                 if (sys.name(src) != "Axel" && sys.name(src) != "Saeyru" && sys.name(src) != "Misora") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to make the server public.");
                  }
 	         sys.makeServerPublic(true);
@@ -4397,7 +4394,7 @@
                      sys.sendMessage(src, "+Bot: Either specify a name or that player is not on.");
                      return;
                  }
-                 if (sys.name(tar) == "Omega") {
+                 if (sys.name(tar) == "Axel") {
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4405,7 +4402,7 @@
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
-	         if (sys.name(tar) == "Gardevoir") {
+	         if (sys.name(tar) == "Misora") {
 		     sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4426,7 +4423,7 @@
                      sys.sendMessage(src, "+Bot: Either specify a name or that player is not on.");
                      return;
                  }
-                 if (sys.name(tar) == "Omega") {
+                 if (sys.name(tar) == "Axel") {
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4434,7 +4431,7 @@
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
-	         if (sys.name(tar) == "Gardevoir") {
+	         if (sys.name(tar) == "Misora") {
 		     sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4455,7 +4452,7 @@
                      sys.sendMessage(src, "+Bot: Either specify a name or that player is not on.");
                      return;
                  }
-                 if (sys.name(tar) == "Omega") {
+                 if (sys.name(tar) == "Axel") {
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4463,7 +4460,7 @@
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
-	         if (sys.name(tar) == "Gardevoir") {
+	         if (sys.name(tar) == "Misora") {
 		     sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4480,7 +4477,7 @@
                  commandpart = commandData.split(':');
 		 var tar = sys.id(commandpart[0])
 		 reason = commandpart[1]
-                 if (sys.name(tar) == "Omega") {
+                 if (sys.name(tar) == "Axel") {
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4488,7 +4485,7 @@
      	             sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
-	         if (sys.name(tar) == "Gardevoir") {
+	         if (sys.name(tar) == "Misora") {
 		     sys.sendMessage(src, "+Bot: The authority level for the server creators cannot be changed.");
 		     return;
 	         }
@@ -4506,7 +4503,7 @@
                  return;
              }
 	     if (command == "unban") {
-                 if (sys.name(src) != "Omega"&& sys.name(src) != "Saeyru" && sys.name(src) != "Gardevoir") {
+                 if (sys.name(src) != "Axel"&& sys.name(src) != "Saeyru" && sys.name(src) != "Misora") {
                      sys.sendMessage(src, "+Bot: You do not have the ability to unban a player.");
                      return;
                  }
